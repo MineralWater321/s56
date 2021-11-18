@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import UserContext from '../UserContext';
 
 export default function Logout(){
@@ -14,6 +14,6 @@ export default function Logout(){
 
     //Redirect back to login
     return(
-        <Navigate to="./login" />
+        <Redirect to="./login" />
     )
 }

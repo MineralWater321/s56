@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 
@@ -104,7 +104,7 @@ export default function Login(props) {
 
     return (
         (user.id !== null) ?
-            <Navigate to="/courses" />
+            <Redirect to="/courses" />
             :
             <Form onSubmit={(e) => authenticate(e)}>
                 <h1>Login</h1>

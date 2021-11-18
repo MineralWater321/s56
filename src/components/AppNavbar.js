@@ -15,7 +15,7 @@ export default function AppNavbar(){
 
     return(
         <Navbar bg="light" variant="light">
-            <Navbar.Brand href="#home">Zuitt</Navbar.Brand>
+            <Navbar.Brand href="#home">PieZada</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="ml-auto">

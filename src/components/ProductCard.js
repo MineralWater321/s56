@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export default function CourseCard({courseProp}){
+export default function ProductCard({courseProp}){
     // console.log(props);
     const { _id, name, description, price} = courseProp;
 
@@ -40,7 +40,7 @@ export default function CourseCard({courseProp}){
 }
 
 //Check validity of the PropTypes
-CourseCard.propTypes = {
+ProductCard.propTypes = {
     //"shape" method is used to check if a prop object conforms to a specific shape
     course: PropTypes.shape({
         name: PropTypes.string.isRequired,

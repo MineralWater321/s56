@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 
@@ -105,10 +105,10 @@ export default function Register(){
 
     return(
         (user.id !== null) ?
-            <Navigate to="/courses" />
+            <Redirect to="/courses" />
             :
             (register === true) ?
-            <Navigate to="/login" />
+            <Redirect to="/login" />
             :
             <Form onSubmit={(e) => registerUser(e)}>
                 {/* Bind the input states via 2-way binding */}
