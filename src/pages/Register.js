@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import UserContext from '../UserContext';
+import Swal from 'sweetalert2';
 
 export default function Register(){
     // State hooks to store the values of the input fields
