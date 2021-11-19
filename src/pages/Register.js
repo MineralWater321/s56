@@ -18,15 +18,73 @@ export default function Register(){
 
    //Function to simulate user registration
    function registerUser(e){
-       e.preventDefault();
-       
-       setEmail('');
-       setPassword1('');
-       setPassword2('');
-
-       alert('Thank you for registering!')
-       setRegister( true );
-   }
+    e.preventDefault();
+    //fetch for checking for duplicate email
+    fetch('http://localhost:3000/users/checkEmail', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({
+                 email: email
+             })
+         })
+         .then(res => res.json())
+         .then(confirm => {
+             console.log(confirm)
+             if(confirm === true){
+                 Swal.fire({
+                     title:'Duplicate email found',
+                     icon: 'error',
+                     text: 'Please provide a different email.'
+                 })
+             }
+             else{
+                 //fetch for Registration
+                 fetch('http://localhost:3000/users/register', {
+                     method: 'POST',
+                     headers: {
+                         'Content-Type': 'application/json'
+                     },
+                     body: JSON.stringify({
+                         firstName: firstName,
+                         lastName: lastName,
+                         completeAddress: completeAddress,
+                         email: email,
+                         mobileNo: mobileNo,
+                         password: password1
+                     })
+                 })
+                 .then(res => res.json())
+                 .then(data => {
+                     console.log(data);
+                     //If no user information is found, the "access" property will not be available and will return udefined
+                     if(data === true){
+                         //The token will be used to retrieve user information across the whole frontend application and storing it in the localStorage to allow ease of access to the user's information
+                         
+                         Swal.fire({
+                             title: 'Registration Successful',
+                             icon: "success", 
+                             text: 'Welcome to Zuitt!'
+                         })                          
+                         
+                         setRegister( true );
+                     }
+                     else{
+                         Swal.fire({
+                             title:'Registration failed',
+                             icon: 'error',
+                             text: 'Check your login details and try again.'
+                         })
+                     }
+                 })
+             }
+         })
+    
+    setEmail('');
+    setPassword1('');
+    setPassword2('');   
+}
 
    useEffect(() => {
         //Validate to enable submit button when all fields are populated and both passwords match
