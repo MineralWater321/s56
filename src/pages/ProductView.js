@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 
-export default function CourseView() {
+export default function ProductView() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");    
     const [price, setPrice] = useState(0);
@@ -16,8 +16,6 @@ export default function CourseView() {
                         <Card.Text>{description}</Card.Text>
                         <Card.Subtitle>Price</Card.Subtitle>
                         <Card.Text>{price}</Card.Text>
-                        <Card.Subtitle>Class Schedule</Card.Subtitle>
-                        <Card.Text>8:00am - 5:00pm</Card.Text>
                         <Button variant="primary" block>Enroll</Button>
                     </Card.Body>
                 </Card>

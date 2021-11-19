@@ -8,7 +8,7 @@ export default function Highlights(){
                 <Card className="cardHighlight p-3">                  
                   <Card.Body>
                     <Card.Title>
-                      <h2>Learn from Home</h2>
+                      <h2>Pie #1</h2>
                     </Card.Title>
                     <Card.Text>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur enim quia corporis magni quis repellendus praesentium asperiores, repellat voluptatum dolore. Repellat maiores ex ad voluptatibus cumque iusto amet. Exercitationem, eum.
@@ -20,10 +20,10 @@ export default function Highlights(){
                 <Card className="cardHighlight p-3">                 
                   <Card.Body>
                     <Card.Title>
-                      <h2>Study now, Pay Later</h2>
+                      <h2>Pie #2</h2>
                     </Card.Title>
                     <Card.Text>
-                    Repellat voluptatum dolore. Repellat maiores ex ad voluptatibus cumque iusto amet. Exercitationem, eum.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur enim quia corporis magni quis repellendus praesentium asperiores, repellat voluptatum dolore. Repellat maiores ex ad voluptatibus cumque iusto amet. Exercitationem, eum.
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -32,7 +32,7 @@ export default function Highlights(){
                 <Card className="cardHighlight p-3">                  
                   <Card.Body>
                     <Card.Title>
-                      <h2>Be Part Of Our Community</h2>
+                      <h2>Pie #3</h2>
                     </Card.Title>
                     <Card.Text>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur enim quia corporis magni quis repellendus praesentium asperiores, repellat voluptatum dolore. Repellat maiores ex ad voluptatibus cumque iusto amet. Exercitationem, eum.
