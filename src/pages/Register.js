@@ -65,7 +65,7 @@ export default function Register(){
                          Swal.fire({
                              title: 'Registration Successful',
                              icon: "success", 
-                             text: 'Welcome to Zuitt!'
+                             text: 'Welcome to PieZada!'
                          })                          
                          
                          setRegister( true );
