@@ -1,5 +1,6 @@
 
 import { Row, Col, Card } from 'react-bootstrap';
+import '../App.css';
 
 export default function Highlights(){
     return(
@@ -17,7 +18,7 @@ export default function Highlights(){
                 </Card>
             </Col>
             <Col xs={12} md={4}>
-                <Card className="cardHighlight p-3">                 
+                <Card className="custom-bg-primary p-3">                 
                   <Card.Body>
                     <Card.Title>
                       <h2>Pie #2</h2>

@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import {Link, NavLink } from 'react-router-dom';
 import UserContext from '../UserContext';
-
+import '../App.css';
 //AppNavbar component
 export default function AppNavbar(){
     //State to store the user information stored in the login page
@@ -14,11 +14,11 @@ export default function AppNavbar(){
     // const {user} = useContext(UserContext);
 
     return(
-        <Navbar bg="light" variant="light">
+        <Navbar className="custom-bg-primary">
             <Navbar.Brand href="#home">PieZada</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
-                <Nav className="ml-auto">
+                <Nav className="m-auto">
                     <Nav.Link as={NavLink} to="/" exact>Home</Nav.Link>
                     <Nav.Link as={NavLink} to="/products" exact>Products</Nav.Link>
                     {(user !== null) ? 

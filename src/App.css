@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-bg-primary{
+  background-color: FEC89A !important;
+}
